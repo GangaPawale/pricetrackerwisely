@@ -74,18 +74,7 @@ export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) =>
   }catch(error){
       console.log(error)
     }
-  // const mailOptions = {
-  //   from: process.env.MAIL_USER,
-  //   to: sendTo,
-  //   html: emailContent.body,
-  //   subject: emailContent.subject,
-  // }
-
-  // transporter.sendMail(mailOptions, (error: any, info: any) => {
-  //   if(error) return console.log(error);
-    
-  //   console.log('Email sent: ', info);
-  // })
+  
 }
 
 
@@ -160,13 +149,5 @@ export async function generateEmailBody(
   return { subject, body };
 }
 
-// const transporter = nodemailer.createTransport({
-//   host:process.env.MAIL_HOST,
-//   port:process.env.MAIL_PORT,
-//   secure:process.env.NODE_ENV !== 'development',
-//   auth:{
-//     user:process.env.MAIL_USER,
-//     pass:process.env.MAIL_PASSWORD
-//   }
-// } as SMTPTransport.Options)
+
 
